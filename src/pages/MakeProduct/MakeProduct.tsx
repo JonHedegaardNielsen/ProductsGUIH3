@@ -36,9 +36,13 @@ export const MakeProduct = () => {
 		}
 
 		if (files && files.length > 0) {
+			let contentBase64 = await convertFileToBase64(files[0]);
+			const commaIndex = contentBase64.indexOf(',');
+			// Return the substring after the first comma
+			contentBase64 = contentBase64.substring(commaIndex + 1).trim(); // Use trim() to remove leading spaces
 			product.imageFile = {
 				fileName: files[0].name,
-				contentBase64: await convertFileToBase64(files[0]),
+				contentBase64: contentBase64,
 			}
 		}
 		console.log(JSON.stringify(product, null, 2));
