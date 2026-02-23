@@ -10,11 +10,6 @@ export type Category = {
 	title: string,
 	categoryId: number
 }
-// export type ProductSendBody = {
-// 	name: string,
-// 	price: number,
-// 	formData: FormData,
-// }
 
 export type ImageFile = {
 	fileName: string,
@@ -22,6 +17,16 @@ export type ImageFile = {
 }
 
 export type PostProductBody = {
-	product: Product,
-	imageFile?: ImageFile
+	title: string,
+	category: Category,
+	price: number,
+	imageFile: ImageFile
+}
+
+export type GetProductBody = {
+	productId: number,
+	title: string,
+	category: Category,
+	price: number,
+	imageFile: ImageFile
 }

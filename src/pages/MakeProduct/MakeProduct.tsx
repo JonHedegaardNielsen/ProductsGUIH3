@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './MakeProduct.css'
-import type { PostProductBody, Product, ProductSendBody } from '../../productTypes';
+import type { ImageFile, PostProductBody } from '../../productTypes';
 
 export const MakeProduct = () => {
 	function convertFileToBase64(file: File): Promise<string> {
@@ -23,28 +23,28 @@ export const MakeProduct = () => {
 	const [price, setPrice] = useState(0);
 	const [files, setFiles] = useState<FileList>();
 	async function createProduct() {
+		if (!files) {
+			throw new Error("error No Files");
+		}
+		let contentBase64 = await convertFileToBase64(files[0]);
+		console.log(contentBase64);
+		const commaIndex = contentBase64.indexOf(',');
+		// Return the substring after the first comma
+		contentBase64 = contentBase64.substring(commaIndex + 1).trim(); // Use trim() to remove leading spaces
+		const imageFile: ImageFile = {
+			fileName: files[0].name,
+			contentBase64: contentBase64,
+		}
 		const product: PostProductBody = {
-			product: {
-				title: name,
-				price,
-				category: {
-					title: 'misc',
-					categoryId: 0,
-				},
-				productId: 0,
-			}
+			title: name,
+			price,
+			category: {
+				title: 'misc',
+				categoryId: 0,
+			},
+			imageFile: imageFile
 		}
 
-		if (files && files.length > 0) {
-			let contentBase64 = await convertFileToBase64(files[0]);
-			const commaIndex = contentBase64.indexOf(',');
-			// Return the substring after the first comma
-			contentBase64 = contentBase64.substring(commaIndex + 1).trim(); // Use trim() to remove leading spaces
-			product.imageFile = {
-				fileName: files[0].name,
-				contentBase64: contentBase64,
-			}
-		}
 		console.log(JSON.stringify(product, null, 2));
 		try {
 			fetch('http://localhost:5035/api/Product', {
