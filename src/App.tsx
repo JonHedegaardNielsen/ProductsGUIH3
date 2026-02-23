@@ -1,12 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
+import { MainLayout } from './layouts/MainLayout/MainLayout'
+import { HomePage } from './pages/HomePage/HomePage'
+import { SingleProductPage } from './pages/SingleProductPage/SingleProductPage'
+import { MakeProduct } from './pages/MakeProduct/MakeProduct'
 
 function App() {
 
 	return (
-		<></>
+		<>
+			<BrowserRouter>
+				<Routes>
+					<Route path='/' element={<MainLayout />}>
+						<Route path='/home' element={<HomePage />} />
+						<Route path='/makeProduct' element={<MakeProduct />} />
+						<Route path='/singleProduct' element={<SingleProductPage />} />
+					</Route>
+				</Routes>
+			</BrowserRouter>
+		</>
 	)
 }
 
