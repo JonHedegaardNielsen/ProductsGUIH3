@@ -1,3 +1,8 @@
 div.products {
 	display: inline-block;
 }
+
+home-page-title {
+	font: bolder;
+	font-size: large;
+}

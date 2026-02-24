@@ -14,7 +14,7 @@ function App() {
 					<Route path='/' element={<MainLayout />}>
 						<Route path='/home' element={<HomePage />} />
 						<Route path='/makeProduct' element={<MakeProduct />} />
-						<Route path='/singleProduct' element={<SingleProductPage />} />
+						<Route path='/singleProduct/:id' element={<SingleProductPage />} />
 					</Route>
 				</Routes>
 			</BrowserRouter>

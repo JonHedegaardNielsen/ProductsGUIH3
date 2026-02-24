@@ -1,12 +1,9 @@
 .footer {
 	background: #8b5e3c;
 	color: #f4f1ec;
-	padding-top: 80px;
-	margin-top: 100px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	padding-top: 30px;
+	margin-top: 150px;
+	margin-bottom: 0;
 }
 
 .footer-top {

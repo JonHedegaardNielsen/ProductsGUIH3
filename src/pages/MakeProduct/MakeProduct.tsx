@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './MakeProduct.css'
 import type { ImageFile, PostProductBody } from '../../productTypes';
 
 export const MakeProduct = () => {
+	useEffect(() => console.log('makeProduck'));
 	function convertFileToBase64(file: File): Promise<string> {
 		return new Promise((resolve, reject) => {
 			const reader = new FileReader();
@@ -61,12 +62,12 @@ export const MakeProduct = () => {
 	}
 
 	return (
-		<>
+		<div className='make-product'>
 			<input type='text' value={name} onChange={e => setName(e.target.value)}></input>
 			<input type='number' value={price} onChange={e => setPrice(e.target.valueAsNumber)}></input>
 			<input type='file' onChange={e => { if (e.target.files != null) { setFiles(e.target.files) } }}></input>
 			<button onClick={createProduct}>Create</button>
-		</>
+		</div>
 	)
 }
 

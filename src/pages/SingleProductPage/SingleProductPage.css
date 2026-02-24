@@ -1,0 +1,39 @@
+.single-product {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-self: center;
+}
+
+.single-product-info {
+	margin-left: 50px;
+
+	text-align: left;
+	width: 30vm;
+
+	.h1 {}
+
+	.description-title {
+		font-weight: bolder;
+		font-size: large;
+	}
+
+	button {
+		background-color: lightseagreen;
+		border: 0;
+		margin-bottom: 20px;
+		color: white;
+	}
+
+	.product-price {}
+}
+
+
+.single-product.image {
+	.go-back-link {
+		text-decoration: none !important;
+	}
+
+	width: 30vm;
+}
