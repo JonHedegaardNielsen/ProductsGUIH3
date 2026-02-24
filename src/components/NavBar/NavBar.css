@@ -1,8 +1,87 @@
-.nav-bar {
-	display: flex;
-	flex-direction: row;
+.header {
+	background: #f4f1ec;
+	border-bottom: 1px solid #ddd;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
 
-	li {
-		margin-left: 40px;
-	}
+.announcement {
+	background: #8b5e3c;
+	color: white;
+	text-align: center;
+	padding: 8px 0;
+	font-size: 13px;
+	letter-spacing: 0.5px;
+}
+
+.topbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 25px 0;
+}
+
+.logo a {
+	font-family: "Playfair Display", serif;
+	font-size: 28px;
+	letter-spacing: 4px;
+	color: #7a4e2d;
+	font-weight: 500;
+}
+
+.icons {
+	position: absolute;
+	right: 0;
+	display: flex;
+	gap: 25px;
+	font-size: 14px;
+}
+
+.icon {
+	color: #555;
+	transition: 0.3s ease;
+}
+
+.icon:hover {
+	color: #7a4e2d;
+}
+
+
+.navbar {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	padding: 15px 0;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+.nav-links a {
+	color: #444;
+	position: relative;
+	padding-bottom: 4px;
+	transition: 0.3s ease;
+}
+
+.nav-links a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0%;
+	height: 1px;
+	background: #7a4e2d;
+	transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+	width: 100%;
 }

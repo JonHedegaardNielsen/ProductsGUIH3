@@ -16,9 +16,9 @@ export const HomePage = () => {
 		loadData();
 	}, [])
 	return (
-		<>
+		<div className='products'>
 			{products.map(product => <ProductCard product={product} />)}
-		</>
+		</div>
 	)
 }
 
