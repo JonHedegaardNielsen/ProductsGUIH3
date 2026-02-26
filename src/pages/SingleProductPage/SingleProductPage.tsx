@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { getAPIBaseURL } from '../../appdata';
 export const SingleProductPage = () => {
 	let { id } = useParams();
-	const [product, setProduct] = useState<Product>();
+	const [product, setProduct] = useState<GetProductBody>();
 
 	useEffect(() => {
 		async function loadProduct() {
@@ -19,7 +19,7 @@ export const SingleProductPage = () => {
 	return (
 		<div className='single-product'>
 			<div className='single-product-image'>
-				<Link to='/home' className={'go-back-link'}>
+				<Link to='/home' className='go-back-link'>
 					<header>
 						Go Back
 					</header>

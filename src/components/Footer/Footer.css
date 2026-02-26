@@ -30,26 +30,35 @@
 .footer-col h4 {
 	font-family: "Playfair Display", serif;
 	margin-bottom: 20px;
+	margin-block-end: 0;
+	margin-block-start: 0;
 	font-weight: 500;
 }
 
 .footer-col ul {
 	list-style: none;
+
+	margin-block-end: 0 !important;
+	margin-block-start: 0 !important;
+	padding-inline-start: 0 !important;
+	margin: 0;
 }
 
 .footer-col li {
+	margin: 0;
 	margin-bottom: 12px;
 }
 
 .footer-col a {
+	color: #f4f1ec !important;
 	font-size: 14px;
+	text-decoration: none !important;
 	opacity: 0.9;
-	transition: 0.3s ease;
 }
 
+
 .footer-col a:hover {
-	opacity: 1;
-	padding-left: 5px;
+	text-decoration: underline !important;
 }
 
 .newsletter p {

@@ -31,9 +31,12 @@
 
 
 .single-product.image {
-	.go-back-link {
-		text-decoration: none !important;
-	}
 
 	width: 30vm;
+}
+
+.go-back-link {
+	text-decoration: none !important;
+	color: #7a4e2d;
+	/* warm brown */
 }
