@@ -1,9 +1,9 @@
-export type Product = {
-	title: string,
-	price: number,
-	imageFile?: ImageFile,
-	category: Category,
-	productId: number,
+export interface Product {
+	title: string;
+	price: number;
+	imageFile?: ImageFile;
+	category: Category;
+	productId: number;
 }
 
 export type Category = {
@@ -16,14 +16,14 @@ export type ImageFile = {
 	contentBase64: string
 }
 
-export type PostProductBody = {
-	title: string,
-	category: Category,
-	price: number,
-	imageFile: ImageFile
+export interface PostProductBody {
+	title: string;
+	category: Category;
+	price: number;
+	imageFile: ImageFile;
 }
 
-export type GetProductBody = {
+export interface GetProductBody {
 	productId: number,
 	title: string,
 	category: Category,

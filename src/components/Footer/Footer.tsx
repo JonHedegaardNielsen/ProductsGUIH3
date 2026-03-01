@@ -1,4 +1,7 @@
+import { useEffect, useState } from 'react'
 import './Footer.css'
+import type { Category } from '../../productTypes'
+import { getCategoryAPIBaseURL } from '../../appdata'
 export const Footer = () => {
 	return (
 		<footer className="footer">

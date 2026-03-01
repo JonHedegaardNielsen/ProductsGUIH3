@@ -2,14 +2,14 @@ import { Link, useParams } from 'react-router'
 import type { GetProductBody, Product } from '../../productTypes'
 import './SingleProductPage.css'
 import { useEffect, useState } from 'react';
-import { getAPIBaseURL } from '../../appdata';
+import { getAPIBaseURL, getProductsAPIBaseURL } from '../../appdata';
 export const SingleProductPage = () => {
 	let { id } = useParams();
 	const [product, setProduct] = useState<GetProductBody>();
 
 	useEffect(() => {
 		async function loadProduct() {
-			const response = await fetch(`${getAPIBaseURL()}/Product/${id}`)
+			const response = await fetch(`${getProductsAPIBaseURL()}/${id}`)
 			const getProductBody: GetProductBody = await response.json();
 			setProduct(getProductBody);
 			console.log(getProductBody)
