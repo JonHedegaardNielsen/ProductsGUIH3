@@ -25,7 +25,7 @@ export const NavBar = () => {
 
 			<div className="topbar container">
 				<div className="logo">
-					<a href="#">AURA//EDIT</a>
+					<Link to='/home'>AURA//EDIT</Link>
 				</div>
 
 				<div className="icons">
@@ -37,10 +37,9 @@ export const NavBar = () => {
 
 			<nav className="navbar">
 				<div className="container nav-links">
+					<Link to='/products'>All books</Link>
 					{categories.map(category =>
-						<Link to={`/products/${category.categoryId}`} > {category.title}</Link>)}
-					<Link to='/home'>Home</Link>
-					<Link to='/makeProduct'>Make Product</Link>
+						<Link key={category.categoryId} to={`/products/${category.categoryId}`} > {category.title}</Link>)}
 				</div>
 			</nav>
 		</header >

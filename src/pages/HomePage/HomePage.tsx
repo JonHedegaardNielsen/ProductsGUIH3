@@ -21,7 +21,7 @@ export const HomePage = () => {
 			<Hero />
 			<h1 className='home-page-title'>Featured Books</h1>
 			<div className='products'>
-				{products.map(product => <ProductCard product={product} />)}
+				{products.map(product => <ProductCard key={product.productId} product={product} />)}
 			</div>
 			<HomeAdd />
 		</div>

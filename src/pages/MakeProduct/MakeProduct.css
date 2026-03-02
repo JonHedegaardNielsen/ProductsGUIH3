@@ -1,5 +1,55 @@
-div.make-product {
+.make-product {
+	background-color: #f8f6f2;
+	/* soft neutral background */
+	padding: 80px 20px;
 	display: flex;
+	justify-content: center;
+}
 
-	flex: 1;
+.make-product div {
+	background: white;
+	padding: 40px;
+	width: 100%;
+	max-width: 600px;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: #f8f6f2;
+	padding: 80px 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.make-product input,
+.make-product select {
+	padding: 12px 14px;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	font-family: inherit;
+	transition: border 0.3s ease;
+}
+
+.make-product input:focus,
+.make-product select:focus {
+	outline: none;
+	border-color: #8b5e3c;
+	/* matches your brown tone */
+}
+
+.make-product button {
+	padding: 12px;
+	background-color: #8b5e3c;
+	color: white;
+	border: none;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.make-product button:hover {
+	background-color: #6f4a30;
 }
