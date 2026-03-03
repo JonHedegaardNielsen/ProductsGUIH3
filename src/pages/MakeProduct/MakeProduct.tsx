@@ -29,7 +29,7 @@ export const MakeProduct = () => {
 				reject(error);
 			};
 
-			reader.readAsDataURL(file); // Reads the file as a Data URL (Base64)
+			reader.readAsDataURL(file);
 		});
 	}
 	const [name, setName] = useState("");
@@ -43,10 +43,9 @@ export const MakeProduct = () => {
 			throw new Error("error No Files");
 		}
 		let contentBase64 = await convertFileToBase64(files[0]);
-		console.log(contentBase64);
 		const commaIndex = contentBase64.indexOf(',');
-		// Return the substring after the first comma
-		contentBase64 = contentBase64.substring(commaIndex + 1).trim(); // Use trim() to remove leading spaces
+
+		contentBase64 = contentBase64.substring(commaIndex + 1).trim();
 		const imageFile: ImageFile = {
 			fileName: files[0].name,
 			contentBase64: contentBase64,
@@ -61,7 +60,7 @@ export const MakeProduct = () => {
 			body: JSON.stringify(product),
 			method: "POST",
 			headers: {
-				'Content-Type': 'application/json', // Specify Content-Type
+				'Content-Type': 'application/json',
 			}
 		})
 	}

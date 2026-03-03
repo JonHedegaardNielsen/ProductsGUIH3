@@ -17,7 +17,6 @@ export const ProductsPage = () => {
 				response = await fetch(`${getProductsAPIBaseURL()}/FromCategoryId/${categoryId}`);
 			}
 			const products = await response.json();
-			console.log(products)
 			setProducts(products);
 		}
 		LoadData();

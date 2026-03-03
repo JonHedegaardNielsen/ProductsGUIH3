@@ -36,7 +36,7 @@ export const Footer = () => {
 				</div>
 
 				<div className="footer-col newsletter">
-					<h4>Stay in the Aura.</h4>
+					<h4>Stay in the {pageName}</h4>
 					<p>Join our newsletter and get 15% off your first order.</p>
 					<form>
 						<input type="email" placeholder="Your email" />

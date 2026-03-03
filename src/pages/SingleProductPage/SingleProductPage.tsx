@@ -12,7 +12,6 @@ export const SingleProductPage = () => {
 			const response = await fetch(`${getProductsAPIBaseURL()}/${id}`)
 			const getProductBody: GetProductBody = await response.json();
 			setProduct(getProductBody);
-			console.log(getProductBody)
 		}
 		loadProduct()
 	}, [])

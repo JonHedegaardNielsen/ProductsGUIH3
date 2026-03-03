@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import './NavBar.css'
+import './Header.css'
 import type { Category } from '../../productTypes'
 import { useEffect, useState } from 'react'
 import { getCategoryAPIBaseURL, pageName } from '../../appdata'

@@ -1,5 +1,5 @@
 import './Hero.css'
-import HeroImage from '../../../public/BooksForHero.png'
+import HeroImage from '../../assets/BooksForHero.png'
 export const Hero = () => {
 	return (
 		<div className='hero'>
