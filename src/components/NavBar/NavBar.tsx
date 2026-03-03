@@ -2,10 +2,10 @@ import { Link } from 'react-router'
 import './NavBar.css'
 import type { Category } from '../../productTypes'
 import { useEffect, useState } from 'react'
-import { getCategoryAPIBaseURL } from '../../appdata'
+import { getCategoryAPIBaseURL, pageName } from '../../appdata'
 import { useNavigate } from 'react-router'
 
-export const NavBar = () => {
+export const Header = () => {
 	const [categories, setCategories] = useState<Array<Category>>([]);
 	const navigate = useNavigate();
 	useEffect(() => {
@@ -18,14 +18,9 @@ export const NavBar = () => {
 	}, [])
 	return (
 		<header className="header">
-
-			<div className="announcement">
-				Free shipping on orders over $150
-			</div>
-
 			<div className="topbar container">
 				<div className="logo">
-					<Link to='/home'>AURA//EDIT</Link>
+					<Link to='/home'>{pageName}</Link>
 				</div>
 
 				<div className="icons">

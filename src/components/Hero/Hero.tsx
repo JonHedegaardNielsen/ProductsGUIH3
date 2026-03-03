@@ -1,8 +1,13 @@
 import './Hero.css'
-
+import HeroImage from '../../../public/BooksForHero.png'
 export const Hero = () => {
 	return (
-		<div></div>
+		<div className='hero'>
+			<div>
+				<h1>The Rook's Books</h1>
+			</div>
+			<img src={HeroImage}></img>
+		</div>
 	)
 }
 

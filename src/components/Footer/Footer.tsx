@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import './Footer.css'
 import type { Category } from '../../productTypes'
-import { getCategoryAPIBaseURL } from '../../appdata'
+import { getCategoryAPIBaseURL, pageName } from '../../appdata'
 export const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="container footer-top">
 
 				<div className="footer-col">
-					<h3 className="footer-logo">AURA//EDIT</h3>
+					<h3 className="footer-logo">{pageName}</h3>
 					<p className="footer-tagline">
 						Refined essentials for modern wardrobes.
 						Timeless silhouettes. Elevated everyday wear.
@@ -47,7 +47,7 @@ export const Footer = () => {
 			</div>
 
 			<div className="footer-bottom">
-				<p>© 2026 AURA//EDIT. All rights reserved.</p>
+				<p>© 2026 {pageName}. All rights reserved.</p>
 				<div className="socials">
 					<a href="#">Instagram</a>
 					<a href="#">Pinterest</a>

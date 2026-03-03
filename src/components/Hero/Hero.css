@@ -1,0 +1,21 @@
+.hero {
+	height: 70vh;
+	min-height: 500px;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 10%;
+	background-color: #e9e4dd;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 100px;
+
+	img {
+		height: 140%;
+	}
+
+	h1 {
+		font-size: 48px;
+		color: #7a4e2d;
+		margin-bottom: 15px;
+	}
+}

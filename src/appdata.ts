@@ -8,3 +8,9 @@ export function getProductsAPIBaseURL(): string {
 export function getCategoryAPIBaseURL(): string {
 	return `${getAPIBaseURL()}/Category`
 }
+
+export function getImageFileAPIBaseURL(): string {
+	return `${getAPIBaseURL()}/ImageFile`
+}
+
+export const pageName = "The Rook's Books";

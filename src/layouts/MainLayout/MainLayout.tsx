@@ -1,12 +1,12 @@
 import { Outlet } from "react-router"
-import { NavBar } from "../../components/NavBar/NavBar"
+import { Header } from "../../components/NavBar/NavBar"
 import { Footer } from "../../components/Footer/Footer"
 
 export const MainLayout = () => {
 	return (
 		<>
 			<main >
-				<NavBar />
+				<Header />
 				<Outlet />
 				<Footer />
 			</main>
